@@ -1,0 +1,139 @@
+/* color- background: #F1D5BB; */
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#home{
+    height: 100vh;
+    width: 100%;
+    padding-top: 20rem;
+    text-align: center;
+    font-size: larger;
+    background-image: url(images/home\ image.png);
+    color: whitesmoke;
+}
+
+div.home-button{
+    margin-top: 2rem;
+}
+
+#home a{
+    margin: 2rem .3rem;
+    padding: .5rem;
+    width: 20%;
+    text-decoration: none;
+    background-color: whitesmoke;
+    color: #000;
+}
+
+figure{
+    padding: 1rem 0;
+}
+
+div #menu-icon{
+    background-color: #000;
+    height: 50%;
+    width: 70%;
+}
+
+main{
+    padding: .5rem;
+    /* background-color: black ; */
+}
+
+div.menu-icon{
+    padding: 2rem;
+    background-color: black;
+    /* color: #F1D5BB; */
+}
+
+svg{
+    color: white;
+    padding: 0 .5rem;
+}
+
+div.food{
+    padding: 1rem;
+    text-align: center;
+}
+
+div.food img{
+    width: 90%;
+    height: 50%;
+}
+
+.menu-icon svg{
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+}
+
+main h1{
+    border-bottom: 5px solid orangered;
+    font-size: x-large;
+    /* text-align: center; */
+    width: 20%;
+}
+
+
+/* CART STYLES  */
+main.cart{
+    background-color: #F1D5BB;
+    padding: 1rem;
+    height: 100vh;
+}
+
+main.cart img{
+    width: 20%;
+    border-radius: 100%;
+}
+
+div.item{
+    display: inline;
+    width: 100%;
+}
+
+.item h1{
+    display: inline-block;
+}
+
+/* figure.item{
+    display: inline-block;
+} */
+
+
+/* Media screens */
+@media (min-width: 768px) {
+    #home button{
+        width: 10%;
+    }
+
+    menu{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+        padding: 5rem 0;
+    }
+
+    div.food{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+    }
+
+    menu h1{
+        position: absolute;
+        top: 2%;
+        left: 15%;
+        font-size: xx-large;
+    }
+}
