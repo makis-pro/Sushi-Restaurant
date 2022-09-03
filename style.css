@@ -7,8 +7,33 @@
 }
 
 body{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* line-height: 3em; */
 }
+
+/* GENERAL STYLING  */
+
+main{
+    padding: .5rem;
+}
+
+h1{
+    border-bottom: 5px solid orangered;
+    width: 30%;
+    letter-spacing: 4px;
+}
+
+.wrapper{
+    padding: .7rem;
+}
+
+svg{
+    color: white;
+    padding: 0 .5rem;
+}
+
+
+/* HOME SECTION STYLING  */
 
 #home{
     height: 100vh;
@@ -17,77 +42,87 @@ body{
     text-align: center;
     font-size: larger;
     background-image: url(images/home\ image.png);
+    background-size: cover;
     color: whitesmoke;
+}
+
+div.heading{
+    line-height: 4rem;
+}
+
+div.heading h1{
+    border-bottom: none;
+    width: 100%;
+    opacity: 0.9;
+}
+
+div.heading p{
+    opacity: 0.8;
 }
 
 div.home-button{
     margin-top: 2rem;
 }
 
-#home a{
-    margin: 2rem .3rem;
-    padding: .5rem;
-    width: 20%;
-    text-decoration: none;
+#home button{
+    cursor: pointer;
+    letter-spacing: 5px;
+    border-radius: 5%;
+    padding: .7rem;
     background-color: whitesmoke;
+    opacity: 0.8;
+    box-shadow: 0 3px 5px rgba(200, 40, 0, 0.9);
+}
+
+#home button:hover{
+    background: white;
+}
+
+#home button a{
+    text-decoration: none; 
     color: #000;
 }
 
-figure{
-    padding: 1rem 0;
+#home a:active{
+    box-shadow: none;
+    margin-top: 2rem;
 }
 
-div #menu-icon{
-    background-color: #000;
-    height: 50%;
-    width: 70%;
+
+/* MENU SECTION STYLES  */
+nav{
+    position: fixed;
+    height: 10%;
+    width: 100%;
+    margin-bottom: 92rem;
 }
 
-main{
-    padding: .5rem;
-    /* background-color: black ; */
+main.menu h1{
+    margin-top: 4rem;
 }
 
-div.menu-icon{
+nav div.menu-icon{
     padding: 2rem;
-    background-color: black;
-    /* color: #F1D5BB; */
+    z-index: 100;
+    background-color: rgb(33, 32, 32);
+    box-shadow: 0px 3px 5px rgba(0,0,0,0.7);
 }
 
-svg{
-    color: white;
-    padding: 0 .5rem;
-}
-
-div.food{
+div.food-wrapper{
     padding: 1rem;
     text-align: center;
+    /* background-color: #F1D5BB; */
 }
 
-div.food img{
-    width: 90%;
-    height: 50%;
-}
-
-.menu-icon svg{
-    height: 50px;
-    width: 50px;
-    display: inline-block;
-}
-
-main h1{
-    border-bottom: 5px solid orangered;
-    font-size: x-large;
-    /* text-align: center; */
-    width: 20%;
+.food-wrapper img{
+    height: 60vh;
+    width: 80vw;
 }
 
 
 /* CART STYLES  */
 main.cart{
-    background-color: #F1D5BB;
     padding: 1rem;
-    height: 100vh;
 }
 
 main.cart img{
@@ -96,44 +131,53 @@ main.cart img{
 }
 
 div.item{
-    display: inline;
-    width: 100%;
+    display: flex;
+    align-items: center;
 }
 
-.item h1{
-    display: inline-block;
-}
 
-/* figure.item{
-    display: inline-block;
-} */
-
-
-/* Media screens */
-@media (min-width: 768px) {
+    /* Media screens */
+@media screen and (min-width: 768px) {
     #home button{
         width: 10%;
     }
 
-    menu{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        position: relative;
-        padding: 5rem 0;
+    /* Menu.html STYLE  */
+
+    body.menu-body{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: .7rem;
     }
 
-    div.food{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        text-align: center;
+    nav div.menu-icon{
+        height: 70vh;
+        width: 5vw;
+        margin-left: 1rem;
+    }
+    
+    main.menu h1{
+        margin: 0 0 0 4.4rem;
     }
 
-    menu h1{
-        position: absolute;
-        top: 2%;
-        left: 15%;
-        font-size: xx-large;
+    nav .menu-icon{
+        height: 70vh;
+        width: 10%;
+        box-shadow: 0px 3px 5px rgba(0,0,0,1);
+    }
+
+    main.menu{
+        padding: 0 4rem 3rem;
+    }
+
+    div.food-wrapper{
+        width: 90vw;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .food-wrapper img{
+        height: 90%;
+        width: 70%;
     }
 }
